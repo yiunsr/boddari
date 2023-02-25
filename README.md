@@ -24,8 +24,14 @@
   * 라이선스
     * 크리에이티브 커먼즈 저작자표시 2.5 라이선스(CC-BY)
     * https://creativecommons.org/licenses/by/2.5/deed.ko
-  * wikinews 디렉토리 밑에 존재합니다.
-  * 
+  * 웹에서 수집하는 소스코드는 wikinews 디렉토리 밑에 존재합니다.
+  * 수집결과는 boddari/wikinews.csv 로 저장됩니다.
 
-## 
+* 책서평
+  * https://www.nanet.go.kr/datasearch/commant/selectWeekCommantList.do
+  * 국회도서관 책 서평
+  * 라이센스
+    * 크리에이티브 커먼즈 저작자표시 라이선스(CC-BY)
+    * 일부 다른 라이센스가 있어서 해당 부분은 제외함
+    * 수집결과는 boddari/book_review01.csv 로 저장됩니다.
 

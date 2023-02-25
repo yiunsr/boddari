@@ -1,4 +1,5 @@
 import sqlite3
+import traceback
 from datetime import datetime
 import requests
 import os
@@ -33,8 +34,8 @@ class Scrap:
         try:
             cur = self.conn.cursor()
             cur.execute(_CREATE_TABLE)
-        except Error as e:
-            print(e)
+        except:
+            print(traceback.format_exc())
     
     def get_urls(self):
         cur = self.conn.cursor()
