@@ -35,3 +35,9 @@
     * 일부 다른 라이센스가 있어서 해당 부분은 제외함
     * 수집결과는 boddari/book_review01.csv 로 저장됩니다.
 
+* airbnb_review
+  * http://insideairbnb.com/get-the-data/
+  * airbnb 공개된 리뷰 중에 한국어 리뷰가 존재함. 해당 리뷰만 뽑은 데이터
+  * 해당 리뷰에는 평점 정보는 없음
+  * 라이센스
+    * 크리에이티브 커먼즈 저작자표시 라이선스(CC-BY)

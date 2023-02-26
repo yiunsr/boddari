@@ -131,3 +131,6 @@ dmypy.json
 
 ### VisualStudioCode ###
 **/.vscode/
+
+# ignore inpath
+airbnb_review/in/**
