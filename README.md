@@ -70,3 +70,64 @@
     * https://www.korea.kr/news/pressReleaseView.do?newsId=(id값) 형태로 기사하나하나 접속 가능함
   * 라이선스
     * data.go.kr 에서는 "이용허락범위 제한 없음" 으로 나오는데 [대한민국 정책브리핑 사이트](korea.kr)에서 실제 기사에 접속하다보면 라이선스가 다르게 표시되어 있음. 그래서 "유형1"(출처표시)에 대해서만 취합했음
+
+* fairytale
+  * Andersen 단편선 번역
+    * [공유마당](https://gongu.copyright.or.kr/)
+    * 미운 아기 오리
+      * fairytale01.txt
+      * https://gongu.copyright.or.kr/gongu/wrt/wrt/view.do?wrtSn=13287194&menuNo=200019
+      * 원작: 안데르센, 번역 : [김선희](https://blog.naver.com/thinkwalden)
+    * 성냥팔이 소녀
+      * fairytale02.txt
+      * https://gongu.copyright.or.kr/gongu/wrt/wrt/view.do?wrtSn=13287193&menuNo=200019
+      * 원작: 안데르센, 번역 : [김선희](https://blog.naver.com/thinkwalden)
+    * 눈의 여왕
+      * fairytale03.txt
+      * https://gongu.copyright.or.kr/gongu/wrt/wrt/view.do?wrtSn=13287190&menuNo=200019
+      * 원작: 안데르센, 번역 : [김선희](https://blog.naver.com/thinkwalden)
+    * 엄지 공주
+      * fairytale04.txt
+      * https://gongu.copyright.or.kr/gongu/wrt/wrt/view.do?wrtSn=13287191&menuNo=200019
+      * 원작: 안데르센, 번역 : [김선희](https://blog.naver.com/thinkwalden)
+    * 인어 공주
+      * fairytale05.txt
+      * https://gongu.copyright.or.kr/gongu/wrt/wrt/view.do?wrtSn=13287192&menuNo=200019
+      * 원작: 안데르센, 번역 : [김선희](https://blog.naver.com/thinkwalden)
+    * 라이선스
+      * 기증저작물 자유이용
+  * 방정환 단편소설
+    * 라이선스
+      * 저작권 만료
+    *  이상한 샘물
+      * fairytale06.txt
+      * 저자: 방정환
+      * https://ko.wikisource.org/wiki/%EC%9D%B4%EC%83%81%ED%95%9C_%EC%83%98%EB%AC%BC
+    * 나비의 꿈
+      * fairytale07.txt
+      * 저자: 방정환
+      * https://ko.wikisource.org/wiki/%EB%82%98%EB%B9%84%EC%9D%98_%EA%BF%88
+    * 금도끼
+      * fairytale08.txt
+      * 저자: 방정환
+      * https://ko.wikisource.org/wiki/%EA%B8%88%EB%8F%84%EB%81%BC
+    * 4월 그믐날 밤
+      * fairytale09.txt
+      * 저자: 방정환
+      * https://ko.wikisource.org/wiki/4%EC%9B%94_%EA%B7%B8%EB%AF%90%EB%82%A0_%EB%B0%A4
+    * 시골쥐 서울 구경
+      * fairytale10.txt
+      * 저자: 방정환
+      * https://ko.wikisource.org/wiki/%EC%8B%9C%EA%B3%A8%EC%A5%90_%EC%84%9C%EC%9A%B8_%EA%B5%AC%EA%B2%BD
+    * 욕심쟁이 땅차지
+      * fairytale11.txt
+      * 저자: 방정환
+      * https://ko.wikisource.org/wiki/%EC%9A%95%EC%8B%AC%EC%9F%81%EC%9D%B4_%EB%95%85%EC%B0%A8%EC%A7%80
+    * 호랑이 형님
+      * fairytale12.txt
+      * 저자: 방정환
+      * https://ko.wikisource.org/wiki/%ED%98%B8%EB%9E%91%EC%9D%B4_%ED%98%95%EB%8B%98
+    * 황금 거위
+      * fairytale13.txt
+      * 저자: 방정환
+      * https://gongu.copyright.or.kr/gongu/wrt/wrt/view.do?wrtSn=9029668&menuNo=200019
