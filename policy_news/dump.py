@@ -29,8 +29,8 @@ def read_file(filepath):
             body = row["정책정보 본문 내용"]
             if len(body) < 100:
                 continue
-            item = dict(id=id_, section=section, date=date_str,
-                        title=title, body=body)
+            item = {"id":id_, "section": section, "작성일": date_str,
+                        "제목": title, "내용": body}
             rows.append(item)
     return rows
 
@@ -61,12 +61,13 @@ def write_csv(total_infos, file_len):
             DIR_PATH, PROJECT_NAME + "." + file_idx_str + ".zip")
         with zipfile.ZipFile(zip_file_path, 'w', zipfile.ZIP_BZIP2) as zip_file:
             io_csv = io.StringIO()
-            fieldnames = ['id', 'date', 'section', 'title', 'body']
+            fieldnames = ['id', '작성일', 'section', '제목', '내용']
             csv_write = csv.DictWriter(io_csv, fieldnames=fieldnames)
             csv_write.writeheader()
             for info in infos:
                 csv_write.writerow(info)
-            zip_file.writestr(PROJECT_NAME + '.csv', io_csv.getvalue())
+            zip_file.writestr(PROJECT_NAME + "." + file_idx_str + ".csv",
+                              io_csv.getvalue())
 
 
 def main():
