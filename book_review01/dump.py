@@ -11,7 +11,8 @@ CSV_FILE = os.path.join(DIR_PATH, PROJECT_NAME + ".csv")
 def get_infos():
     conn = sqlite3.connect(SQLITE_FILE)
     cur = conn.cursor()
-    sql = """select DISTINCT book_title, title, body, content_date from scrap s
+    sql = """select DISTINCT book_title, title, writer, body,
+        content_date, url from scrap s
         where s.title is not null and s.title != '' and length(s.body) >30
     order by content_date asc, id asc
     """
@@ -22,15 +23,17 @@ def get_infos():
         item = {}
         item["책제목"] = row[0]
         item["제목"] = row[1]
-        item["내용"] = row[2]
-        item["작성일"] = row[3]
+        item["작성자"] = row[2]
+        item["내용"] = row[3]
+        item["작성일"] = row[4]
+        item["출처"] = row[5]
         infos.append(item)
     return infos
 
 def write_csv(infos):
     csv_file = open(CSV_FILE,'w', newline='', encoding="UTF-8")
     csv_write = csv.writer(csv_file)
-    fieldnames = ['작성일', '책제목', '제목', '내용']
+    fieldnames = ['작성일', '책제목', '제목', '작성자', '출처', '내용']
     csv_write = csv.DictWriter(csv_file, fieldnames=fieldnames)
     csv_write.writeheader()
     for info in infos:

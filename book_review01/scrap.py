@@ -37,6 +37,7 @@ _CREATE_TABLE = """CREATE TABLE IF NOT EXISTS scrap(
    	url text unique NOT NULL,
     book_title text DEFAULT NULL,
     title text DEFAULT NULL,
+    writer text DEFAULT NULL,
 	body text DEFAULT NULL,
     content_date DATE,
     update_dt INTEGER 
@@ -83,6 +84,7 @@ class Scrap:
             date_str_idx = date_str.find("(")
             date_str = date_str[date_str_idx + 1:-1]
             book_title = soup.select(".bookInfo .bg03 .con")[1].text.strip()
+            writer = soup.select(".bookTxt01 p")[0].text.strip()
 
             img_ele = soup.select(".list02 img")[0]
             ccl_img_src = img_ele.attrs.get("src")
@@ -93,6 +95,7 @@ class Scrap:
             page_info["date"] = date_str
             page_info["body"] = body
             page_info["book_title"] = book_title
+            page_info["writer"] = writer
             return page_info
         except:
             print(traceback.format_exc())
@@ -101,9 +104,9 @@ class Scrap:
         cursor = self.conn.cursor()
         cursor.execute("BEGIN;");
         sql = """INSERT OR IGNORE INTO 
-            scrap(url, book_title, title, body, 
+            scrap(url, book_title, title, writer, body, 
                 content_date, update_dt) 
-            VALUES(:url, :book_title, :title, :body, 
+            VALUES(:url, :book_title, :title, :writer, :body, 
                 :date, strftime('%Y-%m-%d %H-%M-%S','now')
             );
         """
