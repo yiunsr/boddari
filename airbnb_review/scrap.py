@@ -47,11 +47,16 @@ class Scrap:
         soup = BeautifulSoup(res.text, "html.parser")
         table_eles = soup.select(".table")
         download_dict = {}
+        idx = -1
+        data_eles = soup.select("h4")
         for table_ele in table_eles:
-            date_str = table_ele.find_all("td")[0].text
-            date_obj = datetime.strptime(date_str, '%d %B, %Y')
+            idx += 1
+            date_str = data_eles[idx].text
+            date_str = date_str.split("(")[0]
+            # date_str = table_ele.find_all("td")[0].text
+            date_obj = datetime.strptime(date_str, '%d %B, %Y ')
             date_str = datetime.strftime(date_obj, "%Y-%m-%d")
-            city = table_ele.find_all("td")[1].text
+            city = table_ele.find_all("td")[0].text
             href = table_ele.find_all("a")[2].attrs.get("href")
             filename = city + "--" + date_str + "--reviews.csv.gz"
             if filename in self.file_dict:

@@ -2,6 +2,8 @@ import csv
 import gzip
 import glob
 import os
+import io
+import zipfile
 from multiprocessing import Pool
 
 NUM_PROCESS = 6
@@ -27,13 +29,15 @@ def read_file(filepath):
     print("read_file : "  + filepath)
     with gzip.open(filepath, mode="rt", encoding="UTF-8") as csv_file:
         filename = os.path.basename(filepath)
-        city = filename.replace("_reviews.csv.gz", "")
+        city = filename.replace("--reviews.csv.gz", "")
         csv_read = csv.reader(csv_file, delimiter = ',',quotechar='"')
         for row in csv_read:
             if check_korean(row[5]) is False:
                 continue
             comment=row[5].replace("<br/>", "")
-            item = dict(city=city, date=row[2], comment=comment)
+            reviewer_name = row[4]
+            item = {"city": city, "작성일": row[2], "작성자": reviewer_name,
+                "내용": comment}
             rows.append(item)
     return rows
 
@@ -49,15 +53,16 @@ def read_files():
     return rows
 
 def write_csv(infos):
-    csv_file = open(CSV_FILE,'w', newline='', encoding="UTF-8")
-    csv_write = csv.writer(csv_file)
-    fieldnames = ['city', 'date', 'comment']
-    csv_write = csv.DictWriter(csv_file, fieldnames=fieldnames)
-    csv_write.writeheader()
-    for info in infos:
-        csv_write.writerow(info)
-    csv_file.close()
-
+    zip_file_path = os.path.join(
+            DIR_PATH, PROJECT_NAME + ".csv.zip")
+    with zipfile.ZipFile(zip_file_path, 'w', zipfile.ZIP_BZIP2) as zip_file:
+        io_csv = io.StringIO()
+        fieldnames = ['city', '작성일', '작성자', '내용']
+        csv_write = csv.DictWriter(io_csv, fieldnames=fieldnames)
+        csv_write.writeheader()
+        for info in infos:
+            csv_write.writerow(info)
+        zip_file.writestr(PROJECT_NAME + '.csv', io_csv.getvalue())
 
 def main():
     infos = read_files()
