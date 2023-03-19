@@ -40,6 +40,12 @@
     * 크리에이티브 커먼즈 저작자표시 라이선스(CC-BY)
     * 일부 다른 라이선스가 있어서 해당 부분은 제외함
     * 수집결과는 boddari/book_review01.csv 로 저장됩니다.
+* book_review02
+  * http://www.acornpub.co.kr/blog
+  * 에이콘출판사 블로그
+  * 블로그 내용 중 책서평만 정리함
+  * 라이선스
+    *  크리에이티브 커먼즈 코리아 저작자표시 2.0 대한민국 라이센스(CC BY 2.0 KR)
 
 * airbnb_review
   * http://insideairbnb.com/get-the-data/
