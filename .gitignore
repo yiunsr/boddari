@@ -136,3 +136,4 @@ dmypy.json
 airbnb_review/in/**
 policy_news/in/**
 press_release/in/**
+unesco_report/in/**

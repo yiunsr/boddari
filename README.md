@@ -88,3 +88,54 @@
   * [두루책방](http://xn--hu1b40go5ck8x.com/)
     * 라이선스
       * CC BY 4.0
+
+* unesco
+  * 유네스크 출판물 또는 자료
+  * 라이선스
+    * CC-BY-SA 3.0 IGO
+      * IGO는 정부간 국제기구(International organization)를 의미함
+  * 세계시민교육: 학습 주제 및 학습 목표
+    * unesco-0001.txt
+    * https://www.gcedclearinghouse.org/sites/default/files/resources/150020kor.pdf
+  * 함께 그려보는 우리의 미래 : 교육을 위한 새로운 사회계약
+    * unesco-0002.txt
+    * https://unesdoc.unesco.org/ark:/48223/pf0000381212
+  * 다시 생각하는 교육: 교육은 전지구적 공동재를 향해 가고 있는가?
+    * unesco-0003.txt
+    * https://unesdoc.unesco.org/ark:/48223/pf0000374901
+  * 문화 | 2030 지표
+    * unesco-0004.txt
+    * https://www.unesco.or.kr/assets/data/report/kbdZbkXjWpc6t1HdNB5orL9Xox4oOO_1640158506_2.pdf
+  * 저널리즘, 가짜뉴스 & 허위정보 
+    * unesco-0005.txt
+	  * https://www.unesco.or.kr/assets/data/report/AaBXrdz4A1nLK30vxcsNH0OHWwI1fn_1604555429_2.pdf
+  * 2020년 UN 세계물개발보고서: 물과 기후변화, 요약보고서
+    * unesco-0006.txt
+    * https://unesdoc.unesco.org/ark:/48223/pf0000372882_kor
+  * 2021년 세계물개발보고서: 물의 가치 평가: 요약보고서
+    * unesco-0007.txt
+    * https://unesdoc.unesco.org/ark:/48223/pf0000375750_kor
+  * 2022년 유엔 세계물개발 보고서: 지하수 보이지 않는 것을 보이게 요약보고서
+    * unesco-0008.txt
+    * https://unesdoc.unesco.org/ark:/48223/pf0000380726_kor
+  * 문화정책의 (재)구성 : 전지구적 공공재로서 문화를 바라보다
+    * unesco-0009.txt
+    * https://unesdoc.unesco.org/ark:/48223/pf0000380475_kor
+  * 문화정책의 재구성:지속가능성한 성장을 위한 10년 동안의 문화다양성 표현 증진
+    * unesco-0010.txt
+	  * https://en.unesco.org/creativity/sites/creativity/files/gmr_summary_korean.pdf
+  * 저널리즘과 미디어·정보 리터러시
+    * unesco-0011.txt
+	  * https://www.unesco.or.kr/assets/data/report/Z0mxZ1iXuUW6H7k2lu3zw87FgC6GbQ_1640257390_2.pdf
+  * 유네스코 과학보고서: 보다 똑똑한 발전을 위한 시간과의 경주 – 요약본 한국어판
+    * unesco-0012.txt
+	  * https://www.unesco.or.kr/assets/data/report/bhP8oIGvWPWY6WfPIiz8aRGMIWZ4Or_1636445084_2.pdf
+  * 신중한 대화:여성폭력 담론을 위한 미디어 활용 핸드북
+    * unesco-0013.txt
+    * https://unesdoc.unesco.org/ark:/48223/pf0000380007
+  * 인공지능과 교육 - 정책입안자를 위한 지침
+    * unesco-0014.txt
+	  * https://www.unesco.or.kr/assets/data/report/UQ2Cd7pByyvIsMqVIsjyoVtPou9Z3i_1638430937_2.pdf
+  * 평생학습 문화 수용하기
+    * unesco-0015.txt
+    * https://www.gcedclearinghouse.org/sites/default/files/resources/200503kor.pdf
