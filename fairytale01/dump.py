@@ -2,11 +2,11 @@ import glob
 import os
 import csv
 import chardet
+from pathlib import Path
 
 DIR_PATH = os.path.dirname(os.path.realpath(__file__))
 IN_PATH = os.path.join(DIR_PATH, "in/")
 PROJECT_NAME = os.path.basename(DIR_PATH)
-CSV_FILE = os.path.join(DIR_PATH, PROJECT_NAME + ".csv")
 
 def read_file(file_path):
     with open(file_path, 'rb') as txt_file:
@@ -39,7 +39,8 @@ def read_files():
 
 
 def write_csv(infos):
-    csv_file = open(CSV_FILE,'w', newline='', encoding="UTF-8")
+    file_path = os.path.join(DIR_PATH, "csv", PROJECT_NAME + ".csv")
+    csv_file = open(file_path,'w', newline='', encoding="UTF-8")
     csv_write = csv.writer(csv_file)
     fieldnames = ['title', 'writer', 'body']
     csv_write = csv.DictWriter(csv_file, fieldnames=fieldnames)
@@ -48,9 +49,27 @@ def write_csv(infos):
         csv_write.writerow(info)
     csv_file.close()
 
+def write_txt(infos):
+    file_path = os.path.join(DIR_PATH, "txt", PROJECT_NAME + ".txt")
+    txt_file = open(file_path,'w', newline='', encoding="UTF-8")
+    for info in infos:
+        title = info["title"]
+        body = info["body"]
+        txt_file.write(title + "\n")
+        txt_file.write(body + "\n")
+        txt_file.write("\n")
+    txt_file.close()
+
 def main():
+    csv_folder = os.path.join(DIR_PATH, "csv")
+    Path(csv_folder).mkdir(parents=True, exist_ok=True)
+
+    txt_folder = os.path.join(DIR_PATH, "txt")
+    Path(txt_folder).mkdir(parents=True, exist_ok=True)
+
     infos = read_files()
     write_csv(infos)
+    write_txt(infos)
 
 if __name__ == "__main__":
     print("======== dump start ========")
