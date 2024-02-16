@@ -73,7 +73,7 @@ def write_txt(infos):
         for info in infos:
             io_file.write(info['내용'])
             io_file.write("\n\n")
-        zip_file.writestr(PROJECT_NAME + '.csv', io_file.getvalue())
+        zip_file.writestr(PROJECT_NAME + '.txt', io_file.getvalue())
 
 def main():
     csv_folder = os.path.join(DIR_PATH, "csv")
