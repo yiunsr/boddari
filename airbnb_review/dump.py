@@ -4,6 +4,7 @@ import glob
 import os
 import io
 import zipfile
+from pathlib import Path
 from multiprocessing import Pool
 
 NUM_PROCESS = 6
@@ -54,7 +55,7 @@ def read_files():
 
 def write_csv(infos):
     zip_file_path = os.path.join(
-            DIR_PATH, PROJECT_NAME + ".csv.zip")
+            DIR_PATH, "csv", PROJECT_NAME + ".csv.zip")
     with zipfile.ZipFile(zip_file_path, 'w', zipfile.ZIP_BZIP2) as zip_file:
         io_csv = io.StringIO()
         fieldnames = ['city', '작성일', '작성자', '내용']
@@ -64,9 +65,26 @@ def write_csv(infos):
             csv_write.writerow(info)
         zip_file.writestr(PROJECT_NAME + '.csv', io_csv.getvalue())
 
+def write_txt(infos):
+    zip_file_path = os.path.join(
+            DIR_PATH, "txt", PROJECT_NAME + ".txt.zip")
+    with zipfile.ZipFile(zip_file_path, 'w', zipfile.ZIP_BZIP2) as zip_file:
+        io_file = io.StringIO()
+        for info in infos:
+            io_file.write(info['내용'])
+            io_file.write("\n\n")
+        zip_file.writestr(PROJECT_NAME + '.csv', io_file.getvalue())
+
 def main():
+    csv_folder = os.path.join(DIR_PATH, "csv")
+    Path(csv_folder).mkdir(parents=True, exist_ok=True)
+
+    txt_folder = os.path.join(DIR_PATH, "txt")
+    Path(txt_folder).mkdir(parents=True, exist_ok=True)
+
     infos = read_files()
     write_csv(infos)
+    write_txt(infos)
 
 if __name__ == "__main__":
     print("======== dump start ========")
